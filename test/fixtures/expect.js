@@ -1,12 +1,14 @@
 module.exports = [
   {
-      "title": "Don't remove data URIs from SVG imaged (see #205)",
+      "title": "Don't remove data URIs from SVG images (see #205)",
       "payload": "<svg><image id=\"v-146\" width=\"500\" height=\"500\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" preserveratio=\"true\" style=\"border-color: rgb(51, 51, 51); box-sizing: border-box; color: rgb(51, 51, 51); cursor: move; font-family: sans-serif; font-size: 14px; line-height: 20px; outline-color: rgb(51, 51, 51); text-size-adjust: 100%; column-rule-color: rgb(51, 51, 51); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\"></image></svg>",
       "expected": [
           "<svg><image style=\"border-color: rgb(51, 51, 51); box-sizing: border-box; color: rgb(51, 51, 51); cursor: move; font-family: sans-serif; font-size: 14px; line-height: 20px; outline-color: rgb(51, 51, 51); text-size-adjust: 100%; column-rule-color: rgb(51, 51, 51); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" height=\"500\" width=\"500\" id=\"v-146\"></image></svg>",
           "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); box-sizing: border-box; color: rgb(51, 51, 51); cursor: move; font-family: sans-serif; font-size: 14px; line-height: 20px; outline-color: rgb(51, 51, 51); text-size-adjust: 100%; column-rule-color: rgb(51, 51, 51); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" /></svg>",
           "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); box-sizing: border-box; color: rgb(51, 51, 51); cursor: move; font-family: sans-serif; font-size: 14px; line-height: 20px; outline-color: rgb(51, 51, 51); text-size-adjust: 100%; column-rule-color: rgb(51, 51, 51); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" /></svg>",
-          "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); color: rgb(51, 51, 51); line-height: 20px; font-family: sans-serif; font-size: 14px; cursor: move; outline-color: rgb(51, 51, 51); box-sizing: border-box; column-rule-color: rgb(51, 51, 51); text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xmlns:NS1=\"\" NS1:xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" xmlns:NS2=\"\" NS2:xmlns:xlink=\"http://www.w3.org/1999/xlink\" /></svg>"
+          "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); color: rgb(51, 51, 51); line-height: 20px; font-family: sans-serif; font-size: 14px; cursor: move; outline-color: rgb(51, 51, 51); box-sizing: border-box; column-rule-color: rgb(51, 51, 51); text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xmlns:NS1=\"\" NS1:xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" xmlns:NS2=\"\" NS2:xmlns:xlink=\"http://www.w3.org/1999/xlink\" /></svg>",
+          "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); color: rgb(51, 51, 51); line-height: 20px; font-family: sans-serif; font-size: 14px; cursor: move; outline-color: rgb(51, 51, 51); box-sizing: border-box; column-rule-color: rgb(51, 51, 51); text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" /></svg>",
+          "<svg xmlns=\"http://www.w3.org/2000/svg\"><image id=\"v-146\" style=\"border-color: rgb(51, 51, 51); color: rgb(51, 51, 51); line-height: 20px; font-family: sans-serif; font-size: 14px; cursor: move; outline-color: rgb(51, 51, 51); box-sizing: border-box; column-rule-color: rgb(51, 51, 51); text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-emphasis-color: rgb(51, 51, 51); -webkit-text-fill-color: rgb(51, 51, 51); -webkit-text-stroke-color: rgb(51, 51, 51); user-select: none; vector-effect: non-scaling-stroke;\" width=\"500\" height=\"500\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20height%3D%22100%22%20width%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20id%3D%22Layer_1%22%3E%0A%20%20%3Ctitle%3ECompute%3C%2Ftitle%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Crect%20fill%3D%22%239d5025%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2224.74%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23f58536%22%20ry%3D%229.12%22%20rx%3D%229.12%22%20height%3D%2253%22%20width%3D%2253%22%20y%3D%2222.26%22%20x%3D%2223.5%22%3E%3C%2Frect%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E\" /></svg>"
       ]
   },
   {
@@ -36,8 +38,9 @@ module.exports = [
             "<svg xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f1\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"15\" /></filter></defs><rect filter=\"url(#f1)\" fill=\"yellow\" stroke=\"green\" stroke-width=\"3\" width=\"90\" height=\"90\" FILTER=\"url(#f1)\" /></svg>",
             "<svg><defs><filter id=\"f1\"><fegaussianblur in=\"SourceGraphic\" stdDeviation=\"15\" /></filter></defs><rect width=\"90\" height=\"90\" stroke=\"green\" stroke-width=\"3\" fill=\"yellow\" filter=\"url(#f1)\" /></svg>",
             "<svg><defs><filter id=\"f1\"><fegaussianblur stdDeviation=\"15\" in=\"SourceGraphic\"></fegaussianblur></filter></defs><rect filter=\"url(#f1)\" fill=\"yellow\" stroke-width=\"3\" stroke=\"green\" height=\"90\" width=\"90\"></rect></svg>",
-            "<svg xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f1\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"15\" /></filter></defs><rect filter=\"url(#f1)\" fill=\"yellow\" stroke=\"green\" stroke-width=\"3\" width=\"90\" height=\"90\" STROKE-WIDTH=\"3\" STROKE=\"green\" FILL=\"yellow\" FILTER=\"url(#f1)\" /></svg>"
-       ]
+            "<svg xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f1\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"15\" /></filter></defs><rect filter=\"url(#f1)\" fill=\"yellow\" stroke=\"green\" stroke-width=\"3\" width=\"90\" height=\"90\" STROKE-WIDTH=\"3\" STROKE=\"green\" FILL=\"yellow\" FILTER=\"url(#f1)\" /></svg>",
+            "<svg xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f1\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"15\" /></filter></defs><rect filter=\"url(#f1)\" fill=\"yellow\" stroke=\"green\" stroke-width=\"3\" width=\"90\" height=\"90\" /></svg>"
+        ]
      },
   {
       "title": "safe usage of URI-like attribute values (see #135)",
@@ -622,7 +625,8 @@ module.exports = [
           "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:NS1=\"\" NS1:xmlns:xlink=\"http://www.w3.org/1999/xlink\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n<a><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:xlink=\"http://www.w3.org/1999/xlink\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:xlink=\"http://www.w3.org/1999/xlink\"><rect fill=\"white\" width=\"1000\" height=\"1000\" FILL=\"white\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:xlink=\"http://www.w3.org/1999/xlink\"><rect fill=\"white\" width=\"1000\" height=\"1000\" FILL=\"white\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"86\"><input>//[\"'`--&gt;]]&gt;]</div><div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n</svg>//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"89\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<set attributeName=\"onmouseover\" to=\"alert(89)\"/>\n<animate attributeName=\"onunload\" to=\"alert(89)\"/>\n</svg>//[\"'`-->]]>]</div>",
@@ -671,7 +675,8 @@ module.exports = [
           "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:NS1=\"\" NS1:xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:NS1=\"\" NS1:xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\">\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n</svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"95\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n\n\n</svg>//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"96\"><iframe src=mhtml:http://html5sec.org/test.html!xss.html></iframe>\n<iframe src=mhtml:http://html5sec.org/test.gif!xss.html></iframe>//[\"'`-->]]>]</div>",
@@ -723,7 +728,10 @@ module.exports = [
       ]
   }, {
       "payload": "<div id=\"107\"><title onpropertychange=alert(107)></title><title title=></title>//[\"'`-->]]>]</div>",
-      "expected": "<div id=\"107\"><title></title><title title=\"\"></title>//[\"'`--&gt;]]&gt;]</div>"
+      "expected": [
+          "<div id=\"107\"><title></title><title title=\"\"></title>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"107\">//[\"'`--&gt;]]&gt;]</div>"
+      ]
   }, {
       "payload": "<div id=\"108\"><!-- IE 5-8 standards mode -->\n<a href=http://foo.bar/#x=`y></a><img alt=\"`><img src=xx onerror=alert(108)></a>\">\n<!-- IE 5-9 standards mode -->\n<!a foo=x=`y><img alt=\"`><img src=xx onerror=alert(2)//\">\n<?a foo=x=`y><img alt=\"`><img src=xx onerror=alert(3)//\">//[\"'`-->]]>]</div>",
       "expected": [
@@ -739,14 +747,17 @@ module.exports = [
           "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n<rect style=\"filter: url(#c); clip-path: url(&quot;test3.svg#a&quot;); fill: url(#b); marker-end: url(&quot;#d&quot;); marker-mid: url(&quot;#d&quot;); marker-start: url(&quot;#d&quot;); mask: url(&quot;#e&quot;); stroke: url(#f);\" fill=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n<rect style=\"clip-path: url(&quot;test3.svg#a&quot;); fill: url(#b); marker-end: url(&quot;#d&quot;); marker-mid: url(&quot;#d&quot;); marker-start: url(&quot;#d&quot;); mask: url(&quot;#e&quot;); stroke: url(#f);\" fill=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n<rect style=\"clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);\" fill=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" FILL=\"white\" /></a>\n<rect style=\"clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);\" fill=\"white\" FILL=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" FILL=\"white\" /></a>\n<rect style=\"clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);\" fill=\"white\" FILL=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n<rect style=\"filter: url(&quot;#c&quot;); clip-path: url(&quot;test3.svg#a&quot;); fill: url(#b); marker-end: url(&quot;#d&quot;); marker-mid: url(&quot;#d&quot;); marker-start: url(&quot;#d&quot;); mask: url(&quot;#e&quot;); stroke: url(#f);\" fill=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"109\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\" /></a>\n<rect style=\"clip-path: url(&quot;test3.svg#a&quot;); fill: url(#b); marker-end: url(&quot;#d&quot;); marker-mid: url(&quot;#d&quot;); marker-start: url(&quot;#d&quot;); mask: url(&quot;#e&quot;); stroke: url(#f);\" fill=\"white\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0,0\" style=\"marker-start:url(test4.svg#a)\"/>\n</svg>//[\"'`-->]]>]</div>",
       "expected": [
           "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<path style=\"marker-start:url(test4.svg#a)\" d=\"M0,0\"></path>\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n<path style=\"marker-start: url(&quot;test4.svg#a&quot;);\" d=\"M 0 0\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<path style=\"marker-start:url(test4.svg#a)\" d=\"M 0 0\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<path style=\"marker-start:url(test4.svg#a)\" d=\"M 0 0\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"110\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<path style=\"marker-start: url(&quot;test4.svg#a&quot;);\" d=\"M 0 0\" />\n</svg>//[\"'`--&gt;]]&gt;]</div>"
 
       ]
   }, {
@@ -813,7 +824,8 @@ module.exports = [
           "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\">                                        <circle r=\"40\" fill=\"red\"></circle></svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">        <circle fill=\"red\" r=\"40\" /></svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\">        <circle fill=\"red\" r=\"40\" /></svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\">        <circle fill=\"red\" r=\"40\" FILL=\"red\" /></svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\">        <circle fill=\"red\" r=\"40\" FILL=\"red\" /></svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"125\">]&gt;<svg xmlns=\"http://www.w3.org/2000/svg\">                                        <circle fill=\"red\" r=\"40\" /></svg>//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"126\"><object id=\"x\" classid=\"clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598\"></object>\n<object classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" onqt_error=\"alert(126)\" style=\"behavior:url(#x);\"><param name=postdomevents /></object>//[\"'`-->]]>]</div>",
@@ -824,7 +836,8 @@ module.exports = [
           "<div id=\"127\"><svg id=\"x\" xmlns=\"http://www.w3.org/2000/svg\">\n\nalert(127)\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"127\"><svg id=\"x\" xmlns=\"http://www.w3.org/2000/svg\">\n\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
           "<div id=\"127\"><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"x\" xmlns=\"http://www.w3.org/2000/svg\">\n\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"127\"><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"x\">\n\n\n</svg>//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"127\"><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"x\">\n\n\n</svg>//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"127\"><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"x\">\n\nalert(127)\n</svg>//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"128\"><svg><style><img/src=x onerror=alert(128)// </b>//[\"'`-->]]>]</div>",
@@ -881,7 +894,8 @@ module.exports = [
       "payload": "<div id=\"135\"><?xml-stylesheet type=\"text/xsl\" href=\"#\" ?>\n<stylesheet xmlns=\"http://www.w3.org/TR/WD-xsl\">\n<template match=\"/\">\n<eval>new ActiveXObject('htmlfile').parentWindow.alert(135)</eval>\n<if expr=\"new ActiveXObject('htmlfile').parentWindow.alert(2)\"></if>\n</template>\n</stylesheet>//[\"'`-->]]>]</div>",
       "expected": [
           "<div id=\"135\">\n\n<template>\n\n\n</template>\n//[\"'`--&gt;]]&gt;]</div>",
-          "<div id=\"135\">\n\n<template>\nnew ActiveXObject('htmlfile').parentWindow.alert(135)\n\n</template>\n//[\"'`--&gt;]]&gt;]</div>"
+          "<div id=\"135\">\n\n<template>\nnew ActiveXObject('htmlfile').parentWindow.alert(135)\n\n</template>\n//[\"'`--&gt;]]&gt;]</div>",
+          "<div id=\"135\">\n\n<template>\nnew ActiveXObject('htmlfile').parentWindow.alert(135)\n<head></head><body></body>\n</template>\n//[\"'`--&gt;]]&gt;]</div>"
       ]
   }, {
       "payload": "<div id=\"136\"><form action=\"x\" method=\"post\">\n<input name=\"username\" value=\"admin\" />\n<input name=\"password\" type=\"password\" value=\"secret\" />\n<input name=\"injected\" value=\"injected\" dirname=\"password\" />\n<input type=\"submit\">\n</form>//[\"'`-->]]>]</div>",
@@ -901,7 +915,9 @@ module.exports = [
           "<div id=\"137\"><svg>\n<a xlink:href=\"?\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<circle r=\"400\"></circle>\n\n</a>//[\"'`--&gt;]]&gt;]</svg></div>",
           "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:NS1=\"\" NS1:xlink:href=\"?\" xmlns:NS2=\"\" NS2:xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></svg></div>",
           "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xlink:href=\"?\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></svg></div>",
-          "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xlink:href=\"?\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></div>"
+          "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xlink:href=\"?\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></div>",
+          "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"?\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></svg></div>",
+          "<div id=\"137\"><svg xmlns=\"http://www.w3.org/2000/svg\">\n<a xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"?\">\n<circle r=\"400\" />\n\n</a>//[\"'`--&gt;]]&gt;]</svg></div>"
       ]
   }, {
       "title": "Removing name attr from img with id can crash Safari",
@@ -918,4 +934,20 @@ module.exports = [
       "title": "DOM clobbering: acceptCharset",
       "payload": "<input name=acceptCharset>123",
       "expected": "<input>123"
-}];
+  }, {
+      "title": "Testing support for sizes and srcset",
+      "payload": "<img src=\"small.jpg\" srcset=\"medium.jpg 1000w, large.jpg 2000w\">",
+      "expected": [
+          "<img src=\"small.jpg\" srcset=\"medium.jpg 1000w, large.jpg 2000w\">",
+          "<img srcset=\"medium.jpg 1000w, large.jpg 2000w\" src=\"small.jpg\">"
+      ]
+  }, {
+      "title": "See #264 and Edge's weird attribute name errors",
+      "payload": "<div &nbsp;=\"\"></div>",
+      "expected": "<div></div>"
+  }, {
+      "title": "Tests against mXSS behavior in older MS Edge",
+      "payload": "<x/><title>&amp;lt;/title&amp;gt;&amp;lt;img src=1 onerror=alert(1)&gt;",
+      "expected": ["<img src=\"1\">", "&amp;lt;/title&amp;gt;&amp;lt;img src=1 onerror=alert(1)&gt;"]
+  }
+];
